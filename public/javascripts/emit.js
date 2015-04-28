@@ -17,10 +17,10 @@ $('#btnSend').click(function(e){
     var danmaku = {
         "mode": Number($("#mode").attr("danmaku-mode")),
         "text": $('#msg').val(),
-        "stime":0,
+        "stime": 0,
         "size": Number($("#size").attr("danmaku-size")),
-        "color":parseInt($("#color").attr("danmaku-color"),16),
-        "dur":10000
+        "color": parseInt($("#color").attr("danmaku-color"),16),
+        "dur": 10000
     };
     var msg=JSON.stringify(danmaku);
     console.log(msg);

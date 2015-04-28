@@ -9,8 +9,6 @@ window.addEventListener('load', function () {
 	
 	var socket = io();
     socket.on('danmaku show', function (msg) {
-        console.log(msg);
-        $('#messages').append($('<li>').text(msg));
         var danmaku = JSON.parse(msg);
         CM.send(danmaku);
     });

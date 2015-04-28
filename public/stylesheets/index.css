@@ -1,9 +1,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-#messages { list-style-type: none; margin: 0; padding: 0; }
-#messages li { padding: 5px 10px; }
-#messages li:nth-child(odd) { background: #eee; }
+html, body, #my-player {
+    min-height: 100% !important;
+    height: 100%;
+}
 body {
-    margin:0px;
-    padding:0px;
     font-family: "Segoe UI", "Microsoft Yahei", sans-serif;
 }
