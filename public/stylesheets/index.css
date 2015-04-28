@@ -4,5 +4,25 @@ html, body, #my-player {
     height: 100%;
 }
 body {
+	background: #000;
     font-family: "Segoe UI", "Microsoft Yahei", sans-serif;
+}
+
+#my-player {
+	position: relative;
+	z-index: 1;
+}
+
+#my-player:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url("/images/logo.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.3;
 }
