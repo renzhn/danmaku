@@ -6,10 +6,16 @@ window.addEventListener('load', function () {
     CM.start();
     // 开放 CM 对象到全局这样就可以在 console 终端里操控
     window.CM = CM;
-	
-	var socket = io();
+
+    var socket = io();
     socket.on('danmaku show', function (msg) {
         var danmaku = JSON.parse(msg);
         CM.send(danmaku);
     });
+});
+
+window.addEventListener('resize', function (event) {
+    var CM = window.CM;
+    CM.width = document.documentElement.clientWidth;
+    CM.height = document.documentElement.clientHeight;
 });
